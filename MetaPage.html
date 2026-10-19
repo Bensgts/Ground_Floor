@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- MetaPage.html: requirement cross-reference (site map level 1), built on wireframe (b) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Where each assessment requirement can be found in the Ground Floor website code.">
+    <meta name="author" content="Ben Lum">
+    <title>MetaPage | Ground Floor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Embedded CSS: the cross-reference table and validation screenshots -->
+    <style>
+        .xref {
+            font-size: 0.92rem;
+        }
+
+        .xref tbody th {
+            width: 76px;
+        }
+
+        .xref td.line {
+            width: 70px;
+            text-align: right;
+            font-weight: 700;
+            color: #C9A55C;
+        }
+
+        .shots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .shots figure {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to main content</a>
+
+    <!-- DIV: outer wrapper for wireframe (b) -->
+    <div id="page" class="layout-b">
+
+        <!-- HEADER -->
+        <header class="site-header">
+            <a class="brand" href="Main.html">
+                <img src="images/logo.svg" alt="Ground Floor logo: a building with a lit ground floor" width="44" height="44">
+                <span class="brand-name">Ground Floor</span>
+            </a>
+            <p class="tagline">A small business guide. You can make your own startup.</p>
+        </header>
+
+        <!-- NAV -->
+        <nav id="site-nav" aria-label="Site menu">
+            <ul class="menu">
+                <li>
+                    <a href="Main.html">Home</a>
+                    <ul>
+                        <li>
+                            <a href="Roadmap.html">Startup roadmap</a>
+                            <ul>
+                                <li><a href="Funding.html">Costs &amp; funding</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li>
+                            <a href="MetaPage.html" class="current" aria-current="page">MetaPage</a>
+                            <ul>
+                                <li><a href="References.html">References</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="nav-note">Pages sit under the page they belong to, the same way they do in the site map.</p>
+        </nav>
+
+        <!-- MAIN -->
+        <main id="content">
+
+            <section class="page-hero">
+                <div class="wrap">
+                    <h1>MetaPage</h1>
+                    <p class="lead">
+                        Where each assessment requirement is in the code. Line numbers match the files exactly as submitted,
+                        so you can open any page in a code editor and jump straight to it.
+                    </p>
+                </div>
+            </section>
+
+            <section class="band">
+                <div class="wrap">
+                    <p>
+                        <img src="images/icon-code.svg" alt="" width="32" height="32" class="icon">
+                        The page wireframes were drawn in
+                        <a href="https://www.figma.com/design/v8yGCnSw4YBJlReP5vhqDB" target="_blank" rel="noopener">Figma</a>.
+                        Main uses wireframe (a). Roadmap, Funding and this page use wireframe (b).
+                        Contact and References use my own wireframes, (c) and (d).
+                    </p>
+
+                    <h2>Where each requirement is</h2>
+                    <p>
+                        The external stylesheet is <a href="css/styles.css">css/styles.css</a> and the scroll animation on the
+                        home page is <a href="js/reveal.js">js/reveal.js</a>.
+                    </p>
+
+                    <!-- Table 4: cross-reference table, the spec column uses rowspan -->
+                    <div class="table-scroll">
+                        <table class="data-table xref">
+                            <caption>Assessment requirements cross-referenced to page and line</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Spec</th>
+                                    <th scope="col">Requirement</th>
+                                    <th scope="col">How it is done</th>
+                                    <th scope="col">File</th>
+                                    <th scope="col" class="num">Line</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">DS2</th>
+                                    <td>Six pages</td>
+                                    <td>Main, Contact, References, MetaPage plus Roadmap and Funding, all linked from the menu</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">127</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="9">DS3</th>
+                                    <td>Background image</td>
+                                    <td>Blueprint grid tile behind every page</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">29</td>
+                                </tr>
+                                <tr>
+                                    <td>Image in the header</td>
+                                    <td>Logo inside the header link</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">157</td>
+                                </tr>
+                                <tr>
+                                    <td>Image in the footer</td>
+                                    <td>Made in Canberra badge</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">315</td>
+                                </tr>
+                                <tr>
+                                    <td>Image as a hyperlink</td>
+                                    <td>Icon wrapped in a link to Roadmap.html</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">245</td>
+                                </tr>
+                                <tr>
+                                    <td>Icons</td>
+                                    <td>Small icons beside contact details</td>
+                                    <td><a href="Contact.html">Contact.html</a></td>
+                                    <td class="line">178</td>
+                                </tr>
+                                <tr>
+                                    <td>alt, width and height</td>
+                                    <td>Every img has alt, width and height</td>
+                                    <td><a href="Roadmap.html">Roadmap.html</a></td>
+                                    <td class="line">125</td>
+                                </tr>
+                                <tr>
+                                    <td>Align (right)</td>
+                                    <td>Class .align-right floats the image right</td>
+                                    <td><a href="Funding.html">Funding.html</a></td>
+                                    <td class="line">101</td>
+                                </tr>
+                                <tr>
+                                    <td>Align (left)</td>
+                                    <td>Class .align-left floats the image left</td>
+                                    <td><a href="References.html">References.html</a></td>
+                                    <td class="line">96</td>
+                                </tr>
+                                <tr>
+                                    <td>Border</td>
+                                    <td>Class .img-border adds a 3px border</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">503</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="3">DS4</th>
+                                    <td>External link</td>
+                                    <td>Opens business.gov.au in a new tab</td>
+                                    <td><a href="Roadmap.html">Roadmap.html</a></td>
+                                    <td class="line">149</td>
+                                </tr>
+                                <tr>
+                                    <td>External links</td>
+                                    <td>Government help links</td>
+                                    <td><a href="Contact.html">Contact.html</a></td>
+                                    <td class="line">199</td>
+                                </tr>
+                                <tr>
+                                    <td>Email link</td>
+                                    <td>mailto link with a subject line</td>
+                                    <td><a href="Contact.html">Contact.html</a></td>
+                                    <td class="line">179</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="3">DS5</th>
+                                    <td>Contact form</td>
+                                    <td>form element</td>
+                                    <td><a href="Contact.html">Contact.html</a></td>
+                                    <td class="line">126</td>
+                                </tr>
+                                <tr>
+                                    <td>Form controls</td>
+                                    <td>Text, email, select, radio, textarea and checkbox</td>
+                                    <td><a href="Contact.html">Contact.html</a></td>
+                                    <td class="line">141</td>
+                                </tr>
+                                <tr>
+                                    <td>Buttons</td>
+                                    <td>Submit and reset buttons</td>
+                                    <td><a href="Contact.html">Contact.html</a></td>
+                                    <td class="line">163</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="4">DS6</th>
+                                    <td>Unordered list</td>
+                                    <td>Checklist with tick symbols</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">215</td>
+                                </tr>
+                                <tr>
+                                    <td>Ordered list</td>
+                                    <td>The six steps</td>
+                                    <td><a href="Roadmap.html">Roadmap.html</a></td>
+                                    <td class="line">121</td>
+                                </tr>
+                                <tr>
+                                    <td>Description list</td>
+                                    <td>Glossary using dl, dt and dd</td>
+                                    <td><a href="Roadmap.html">Roadmap.html</a></td>
+                                    <td class="line">275</td>
+                                </tr>
+                                <tr>
+                                    <td>Nested list</td>
+                                    <td>Menu tree that follows the site map</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">128</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="3">DS7</th>
+                                    <td>UTF-8</td>
+                                    <td>Character set declared</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">5</td>
+                                </tr>
+                                <tr>
+                                    <td>Symbols</td>
+                                    <td>Tick &#10003;, quotes &#8220; &#8221;, copyright &copy;</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">216</td>
+                                </tr>
+                                <tr>
+                                    <td>Symbols</td>
+                                    <td>Cross &#10007; in the funding table</td>
+                                    <td><a href="Funding.html">Funding.html</a></td>
+                                    <td class="line">198</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="4">DS8</th>
+                                    <td>Line break</td>
+                                    <td>br inside the statistic</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">195</td>
+                                </tr>
+                                <tr>
+                                    <td>Block quote</td>
+                                    <td>blockquote with cite attribute</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">227</td>
+                                </tr>
+                                <tr>
+                                    <td>Phrase elements</td>
+                                    <td>abbr, strong, em, q, mark, cite</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">196</td>
+                                </tr>
+                                <tr>
+                                    <td>Extra elements</td>
+                                    <td>dfn, h4 to h6, small, address</td>
+                                    <td><a href="Contact.html">Contact.html</a></td>
+                                    <td class="line">183</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="5">DS9</th>
+                                    <td>div</td>
+                                    <td>Outer wrapper div</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">124</td>
+                                </tr>
+                                <tr>
+                                    <td>header</td>
+                                    <td>Site header</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">155</td>
+                                </tr>
+                                <tr>
+                                    <td>nav</td>
+                                    <td>Site menu</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">127</td>
+                                </tr>
+                                <tr>
+                                    <td>main</td>
+                                    <td>Page content</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">164</td>
+                                </tr>
+                                <tr>
+                                    <td>footer</td>
+                                    <td>Site footer</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">305</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="3">DS10</th>
+                                    <td>External CSS</td>
+                                    <td>link to css/styles.css</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">17</td>
+                                </tr>
+                                <tr>
+                                    <td>Embedded CSS</td>
+                                    <td>style element in the head</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">24</td>
+                                </tr>
+                                <tr>
+                                    <td>Inline CSS</td>
+                                    <td>style attribute</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">297</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="12">DS11</th>
+                                    <td>background-color</td>
+                                    <td>Page background</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">28</td>
+                                </tr>
+                                <tr>
+                                    <td>color</td>
+                                    <td>Body text colour</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">30</td>
+                                </tr>
+                                <tr>
+                                    <td>font-family</td>
+                                    <td>Body font</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">31</td>
+                                </tr>
+                                <tr>
+                                    <td>font-size</td>
+                                    <td>Body text size</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">32</td>
+                                </tr>
+                                <tr>
+                                    <td>font-style</td>
+                                    <td>Italic source notes (h6)</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">82</td>
+                                </tr>
+                                <tr>
+                                    <td>font-weight</td>
+                                    <td>Headings</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">49</td>
+                                </tr>
+                                <tr>
+                                    <td>margin</td>
+                                    <td>Page wrapper margin</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">125</td>
+                                </tr>
+                                <tr>
+                                    <td>text-align</td>
+                                    <td>Table captions</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">648</td>
+                                </tr>
+                                <tr>
+                                    <td>text-decoration</td>
+                                    <td>Links</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">94</td>
+                                </tr>
+                                <tr>
+                                    <td>text-indent</td>
+                                    <td>Hanging indent on references</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">151</td>
+                                </tr>
+                                <tr>
+                                    <td>text-shadow</td>
+                                    <td>Hero heading</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">44</td>
+                                </tr>
+                                <tr>
+                                    <td>width</td>
+                                    <td>Reading width inside each block</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">257</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">DS12</th>
+                                    <td>Hex colours</td>
+                                    <td>Every colour is a hex value</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">4</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="2">DS13</th>
+                                    <td>ID selector</td>
+                                    <td>#page</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">123</td>
+                                </tr>
+                                <tr>
+                                    <td>Class selector</td>
+                                    <td>.panel</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">263</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="3">DS14</th>
+                                    <td>Wireframe (a)</td>
+                                    <td>Grid for Main.html</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">159</td>
+                                </tr>
+                                <tr>
+                                    <td>Wireframe (b)</td>
+                                    <td>Grid areas for Roadmap, Funding, MetaPage</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">178</td>
+                                </tr>
+                                <tr>
+                                    <td>Wireframes (c) and (d)</td>
+                                    <td>Stacked layout for Contact and References</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">210</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="7">DS15</th>
+                                    <td>Table 1</td>
+                                    <td>Column spanning header groups</td>
+                                    <td><a href="Roadmap.html">Roadmap.html</a></td>
+                                    <td class="line">222</td>
+                                </tr>
+                                <tr>
+                                    <td>Table 2</td>
+                                    <td>Row spanning and a spanned footer total</td>
+                                    <td><a href="Funding.html">Funding.html</a></td>
+                                    <td class="line">121</td>
+                                </tr>
+                                <tr>
+                                    <td>Table 3</td>
+                                    <td>Responsive: scrolls sideways on phones</td>
+                                    <td><a href="Funding.html">Funding.html</a></td>
+                                    <td class="line">181</td>
+                                </tr>
+                                <tr>
+                                    <td>Borders and size</td>
+                                    <td>border and width: 100%</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">639</td>
+                                </tr>
+                                <tr>
+                                    <td>th and td style</td>
+                                    <td>Black headings, padded cells</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">654</td>
+                                </tr>
+                                <tr>
+                                    <td>Alignment</td>
+                                    <td>Right-aligned money column</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">689</td>
+                                </tr>
+                                <tr>
+                                    <td>Responsiveness</td>
+                                    <td>Scrolling wrapper</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">698</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">DS16</th>
+                                    <td>Validation</td>
+                                    <td>Screenshots of the HTML and CSS checks</td>
+                                    <td><a href="MetaPage.html">MetaPage.html</a></td>
+                                    <td class="line">577</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">DS17</th>
+                                    <td>Site map menu</td>
+                                    <td>Nested list in the nav</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">128</td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="6">Extra</th>
+                                    <td>Full-width blocks</td>
+                                    <td>.band classes build each page from stacked blocks</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">218</td>
+                                </tr>
+                                <tr>
+                                    <td>Scroll reveal</td>
+                                    <td>Script that fades blocks in as you scroll</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">21</td>
+                                </tr>
+                                <tr>
+                                    <td>Scroll reveal CSS</td>
+                                    <td>Hidden then shown by the is-visible class</td>
+                                    <td><a href="css/styles.css">css/styles.css</a></td>
+                                    <td class="line">814</td>
+                                </tr>
+                                <tr>
+                                    <td>Audio</td>
+                                    <td>audio with controls</td>
+                                    <td><a href="Main.html">Main.html</a></td>
+                                    <td class="line">282</td>
+                                </tr>
+                                <tr>
+                                    <td>Video</td>
+                                    <td>video with poster and captions</td>
+                                    <td><a href="Roadmap.html">Roadmap.html</a></td>
+                                    <td class="line">106</td>
+                                </tr>
+                                <tr>
+                                    <td>Headings h1 to h6</td>
+                                    <td>h4, h5 and h6 in step 4</td>
+                                    <td><a href="Roadmap.html">Roadmap.html</a></td>
+                                    <td class="line">162</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="band band-coal">
+                <div class="wrap">
+                    <h2>A note on align and border</h2>
+                    <p>
+                        The <code>align</code> and <code>border</code> attributes on <code>&lt;img&gt;</code> are obsolete in HTML5,
+                        so the W3C validator reports them as errors. To keep every page valid, images use the
+                        <code>alt</code>, <code>width</code> and <code>height</code> attributes in the HTML, while alignment and
+                        borders come from the CSS classes <code>.align-right</code>, <code>.align-left</code> and
+                        <code>.img-border</code>. These classes do the same job as the old attributes.
+                    </p>
+                </div>
+            </section>
+
+            <section class="band">
+                <div class="wrap">
+                    <h2>Validation</h2>
+                    <p>
+                        Every page was checked with the
+                        <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Markup Validation Service</a>
+                        and the stylesheet with the
+                        <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">W3C CSS Validation Service</a>.
+                        Click a screenshot to open it full size.
+                    </p>
+                    <div class="shots">
+                        <figure>
+                            <a href="images/validation-main.png"><img src="images/validation-main.png" alt="W3C Markup Validation Service result for Main.html: no errors or warnings" width="800" height="600" class="img-border"></a>
+                            <figcaption>Main.html: W3C Markup Validation Service</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="images/validation-roadmap.png"><img src="images/validation-roadmap.png" alt="W3C Markup Validation Service result for Roadmap.html: no errors or warnings" width="800" height="600" class="img-border"></a>
+                            <figcaption>Roadmap.html: W3C Markup Validation Service</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="images/validation-funding.png"><img src="images/validation-funding.png" alt="W3C Markup Validation Service result for Funding.html: no errors or warnings" width="800" height="600" class="img-border"></a>
+                            <figcaption>Funding.html: W3C Markup Validation Service</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="images/validation-contact.png"><img src="images/validation-contact.png" alt="W3C Markup Validation Service result for Contact.html: no errors or warnings" width="800" height="600" class="img-border"></a>
+                            <figcaption>Contact.html: W3C Markup Validation Service</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="images/validation-references.png"><img src="images/validation-references.png" alt="W3C Markup Validation Service result for References.html: no errors or warnings" width="800" height="600" class="img-border"></a>
+                            <figcaption>References.html: W3C Markup Validation Service</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="images/validation-metapage.png"><img src="images/validation-metapage.png" alt="W3C Markup Validation Service result for MetaPage.html: no errors or warnings" width="800" height="600" class="img-border"></a>
+                            <figcaption>MetaPage.html: W3C Markup Validation Service</figcaption>
+                        </figure>
+                        <figure>
+                            <a href="images/validation-css.png"><img src="images/validation-css.png" alt="W3C CSS Validation Service result for styles.css: no errors found" width="800" height="600" class="img-border"></a>
+                            <figcaption>css/styles.css: W3C CSS Validation Service</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-links">
+                <img src="images/logo.svg" alt="Ground Floor logo" width="36" height="36">
+                <p>&copy; 2026 Ground Floor<br><small>Built for 4478 Introduction to IT</small></p>
+            </div>
+            <p>
+                <a href="mailto:u3275830@uni.canberra.edu.au">Email us</a> |
+                <a href="https://business.gov.au/" target="_blank" rel="noopener">business.gov.au</a> |
+                <a href="References.html">References</a>
+            </p>
+            <img src="images/badge-canberra.svg" alt="Made in Canberra badge" width="150" height="48">
+        </footer>
+    </div>
+</body>
+</html>

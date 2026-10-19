@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300">
+<rect width="420" height="300" fill="#0D0D0F"/>
+<line x1="40" y1="262" x2="380" y2="262" stroke="#57503F" stroke-width="2"/>
+<ellipse cx="110" cy="250" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="110" cy="234" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="110" cy="218" rx="34" ry="9" fill="#0D0D0F" stroke="#C9A55C" stroke-width="2.5"/>
+<ellipse cx="200" cy="250" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="200" cy="234" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="200" cy="218" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="200" cy="202" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="200" cy="186" rx="34" ry="9" fill="#0D0D0F" stroke="#C9A55C" stroke-width="2.5"/>
+<ellipse cx="290" cy="250" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="290" cy="234" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="290" cy="218" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="290" cy="202" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="290" cy="186" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="290" cy="170" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="290" cy="154" rx="34" ry="9" fill="#0D0D0F" stroke="#57503F" stroke-width="2.5"/>
+<ellipse cx="290" cy="138" rx="34" ry="9" fill="#0D0D0F" stroke="#C9A55C" stroke-width="2.5"/>
+<path d="M60 150 L150 128 L240 96 L350 40" fill="none" stroke="#C9A55C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M330 40 H350 V60" fill="none" stroke="#C9A55C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="290" y="160" font-family="Georgia, serif" font-size="28" fill="#C9A55C" text-anchor="middle">$</text>
+</svg>

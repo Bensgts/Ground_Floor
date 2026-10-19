@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Funding.html: "Your choice 2" (site map level 2, under Roadmap.html), built on wireframe (b) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="What it costs to start a small business in Australia and six ways to fund it.">
+    <meta name="author" content="Ben Lum">
+    <title>Costs and funding | Ground Floor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Embedded CSS: styles used only on the funding page -->
+    <style>
+        /* The budget table uses rowspan, so plain zebra stripes would look uneven */
+        .budget tbody tr:nth-child(even) td {
+            background-color: #0D0D0F;
+        }
+
+        .budget td.num {
+            width: 160px;
+        }
+
+        .yes {
+            color: #C9A55C;
+            font-weight: 700;
+        }
+
+        .no {
+            color: #A39E94;
+        }
+
+        .tips li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to main content</a>
+
+    <!-- DIV: outer wrapper for wireframe (b) -->
+    <div id="page" class="layout-b">
+
+        <!-- HEADER -->
+        <header class="site-header">
+            <a class="brand" href="Main.html">
+                <img src="images/logo.svg" alt="Ground Floor logo: a building with a lit ground floor" width="44" height="44">
+                <span class="brand-name">Ground Floor</span>
+            </a>
+            <p class="tagline">A small business guide. You can make your own startup.</p>
+        </header>
+
+        <!-- NAV -->
+        <nav id="site-nav" aria-label="Site menu">
+            <ul class="menu">
+                <li>
+                    <a href="Main.html">Home</a>
+                    <ul>
+                        <li>
+                            <a href="Roadmap.html">Startup roadmap</a>
+                            <ul>
+                                <li><a href="Funding.html" class="current" aria-current="page">Costs &amp; funding</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li>
+                            <a href="MetaPage.html">MetaPage</a>
+                            <ul>
+                                <li><a href="References.html">References</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="nav-note">Pages sit under the page they belong to, the same way they do in the site map.</p>
+        </nav>
+
+        <!-- MAIN -->
+        <main id="content">
+
+            <section class="page-hero">
+                <div class="wrap">
+                    <h1>Costs and funding</h1>
+                    <p class="lead">
+                        Starting small can cost far less than people expect. Registering an
+                        <abbr title="Australian Business Number">ABN</abbr> is free, and a business name is
+                        $47 for a year (business.gov.au, 2026).
+                    </p>
+                </div>
+            </section>
+
+            <section class="band">
+                <div class="wrap">
+                    <!-- Image aligned right with a border (CSS classes replace the old align and border attributes) -->
+                    <img src="images/funding.svg" alt="Line drawing of coin stacks growing taller beside a rising line" width="360" height="257" class="align-right img-border">
+
+                    <h2>An example first-year budget</h2>
+                    <p>
+                        Most of your first-year spending goes on running the business, not registering it.
+                        The example below is for a small online craft shop run by one person.
+                    </p>
+
+                    <!-- Table 2: budget with row spanning and a footer total that spans columns -->
+                    <table class="data-table budget clear">
+                        <caption>Example only. Amounts marked as estimates will be different for your business.</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Category</th>
+                                <th scope="col">Item</th>
+                                <th scope="col" class="num">Cost (AUD)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3" scope="rowgroup">Setting up</th>
+                                <td><abbr title="Australian Business Number">ABN</abbr> registration</td>
+                                <td class="num">$0</td>
+                            </tr>
+                            <tr>
+                                <td>Business name, one year</td>
+                                <td class="num">$47</td>
+                            </tr>
+                            <tr>
+                                <td>Domain name and website builder (estimate)</td>
+                                <td class="num">$300</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3" scope="rowgroup">Running costs</th>
+                                <td>Public liability insurance (estimate)</td>
+                                <td class="num">$600</td>
+                            </tr>
+                            <tr>
+                                <td>Accounting and design software (estimate)</td>
+                                <td class="num">$360</td>
+                            </tr>
+                            <tr>
+                                <td>Small marketing tests (estimate)</td>
+                                <td class="num">$500</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2" scope="rowgroup">Stock and tools</th>
+                                <td>Starter materials (estimate)</td>
+                                <td class="num">$1,500</td>
+                            </tr>
+                            <tr>
+                                <td>Equipment (estimate)</td>
+                                <td class="num">$800</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Example total for year one</td>
+                                <td class="num">$4,107</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <p class="note">
+                        Setting up as a company instead? Add $636 to register it and $342 each year for the
+                        annual review (business.gov.au, 2026).
+                    </p>
+                </div>
+            </section>
+
+            <section class="band band-coal">
+                <div class="wrap">
+                    <h2>Where the money can come from</h2>
+                    <p>
+                        Swipe sideways to see the whole table on a phone.
+                        The government's <a href="https://business.gov.au/grants-and-programs" target="_blank" rel="noopener">grants and programs finder</a>
+                        lists grants that are open right now.
+                    </p>
+
+                    <!-- Table 3: responsive table that scrolls sideways on small screens -->
+                    <div class="table-scroll">
+                        <table class="data-table">
+                            <caption>Six ways to fund a new business</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Option</th>
+                                    <th scope="col">How it works</th>
+                                    <th scope="col">Suits</th>
+                                    <th scope="col" class="center">Give up ownership?</th>
+                                    <th scope="col" class="center">Pay it back?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Bootstrapping</th>
+                                    <td>You use your savings and early sales</td>
+                                    <td>Low-cost ideas and side businesses</td>
+                                    <td class="center no">&#10007; No</td>
+                                    <td class="center no">&#10007; No</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Friends and family</th>
+                                    <td>People you know lend or invest. Put it in writing.</td>
+                                    <td>Small amounts early on</td>
+                                    <td class="center">Sometimes</td>
+                                    <td class="center">Sometimes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Bank loan</th>
+                                    <td>You borrow and repay with interest</td>
+                                    <td>Businesses with steady income</td>
+                                    <td class="center no">&#10007; No</td>
+                                    <td class="center yes">&#10003; Yes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Government grants</th>
+                                    <td>You apply for money for a set purpose. Places are competitive.</td>
+                                    <td>Projects that match a program</td>
+                                    <td class="center no">&#10007; No</td>
+                                    <td class="center no">&#10007; No, but conditions apply</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Angel investors</th>
+                                    <td>One person invests in exchange for shares</td>
+                                    <td>Startups aiming to grow fast</td>
+                                    <td class="center yes">&#10003; Yes</td>
+                                    <td class="center no">&#10007; No</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Crowdfunding</th>
+                                    <td>Many people pre-order or pledge online</td>
+                                    <td>Products with a strong story</td>
+                                    <td class="center">Depends on the type</td>
+                                    <td class="center no">&#10007; No, but you must deliver</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="band band-bone">
+                <div class="wrap split">
+                    <h2>Five ways to spend less in year one</h2>
+
+                    <!-- Unordered list: the tips can be done in any order -->
+                    <ul class="tips">
+                        <li>Start as a sole trader and change structure when the business needs it.</li>
+                        <li>Trade under your own name until you need a business name.</li>
+                        <li>Use the free tier of software until you outgrow it.</li>
+                        <li>Sell before you stock: take pre-orders for your first batch.</li>
+                        <li>Borrow or buy second-hand equipment.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="band band-tight band-coal">
+                <div class="wrap">
+                    <p class="note">
+                        <strong>Please note:</strong> this page is general information, not financial advice.
+                        Talk to an accountant or a registered tax agent before making money decisions.
+                    </p>
+                    <a class="btn btn-alt" href="Roadmap.html">Back to the roadmap</a>
+                    <a class="btn" href="Contact.html">Ask us a question</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-links">
+                <img src="images/logo.svg" alt="Ground Floor logo" width="36" height="36">
+                <p>&copy; 2026 Ground Floor<br><small>Built for 4478 Introduction to IT</small></p>
+            </div>
+            <p>
+                <a href="mailto:u3275830@uni.canberra.edu.au">Email us</a> |
+                <a href="https://business.gov.au/" target="_blank" rel="noopener">business.gov.au</a> |
+                <a href="References.html">References</a>
+            </p>
+            <img src="images/badge-canberra.svg" alt="Made in Canberra badge" width="150" height="48">
+        </footer>
+    </div>
+</body>
+</html>

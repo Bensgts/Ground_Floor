@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Main.html: home page (site map level 0), built on wireframe (a) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ground Floor: a small business guide for people who want to start their own business in Australia.">
+    <meta name="author" content="Ben Lum">
+    <title>Ground Floor | Start your own small business</title>
+
+    <!-- Web fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+
+    <!-- External CSS shared by every page -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Tells the CSS that JavaScript is on, so blocks can fade in as you scroll -->
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="js/reveal.js" defer></script>
+
+    <!-- Embedded CSS: styles used only on this page -->
+    <style>
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 88vh;
+            padding: 96px 0 56px;
+            background-image: radial-gradient(circle at 78% 40%, #2B2416 0%, #0D0D0F 58%);
+            border-bottom: 1px solid #2C2B31;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .hero h1 {
+            font-size: 5.4rem;
+            text-shadow: 0 4px 30px #000000;
+        }
+
+        .source-line {
+            margin: 64px 0 0;
+            padding-top: 22px;
+            border-top: 1px solid #2C2B31;
+            font-size: 0.92rem;
+            color: #77736B;
+            max-width: none;
+        }
+
+        .big-number {
+            margin: 0;
+            font-family: "Instrument Serif", Georgia, serif;
+            font-size: 5.6rem;
+            line-height: 1;
+            color: #0D0D0F;
+        }
+
+        .number-label {
+            margin: 6px 0 40px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #D5CFC3;
+            color: #5E5A53;
+        }
+
+        .card img {
+            margin-bottom: 28px;
+        }
+
+        .card p {
+            color: #5E5A53;
+        }
+
+        .band-gold h2 {
+            color: #0D0D0F;
+            font-size: 3.4rem;
+        }
+
+        .btn-dark {
+            background-color: #0D0D0F;
+            border-color: #0D0D0F;
+            color: #F2EEE6;
+        }
+
+        .btn-dark:hover {
+            background-color: #2C2B31;
+            border-color: #2C2B31;
+            color: #F2EEE6;
+        }
+
+        @media (max-width: 960px) {
+            .hero {
+                min-height: 0;
+            }
+
+            .hero-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .hero-grid img {
+                max-width: 360px;
+            }
+
+            .big-number {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to main content</a>
+
+    <!-- DIV: outer wrapper for wireframe (a) -->
+    <div id="page" class="layout-a">
+
+        <!-- NAV: site menu following the site map -->
+        <nav id="site-nav" aria-label="Site menu">
+            <ul class="menu">
+                <li>
+                    <a href="Main.html" class="current" aria-current="page">Home</a>
+                    <ul>
+                        <li>
+                            <a href="Roadmap.html">Startup roadmap</a>
+                            <ul>
+                                <li><a href="Funding.html">Costs &amp; funding</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li>
+                            <a href="MetaPage.html">MetaPage</a>
+                            <ul>
+                                <li><a href="References.html">References</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="nav-note">Pages sit under the page they belong to, the same way they do in the site map.</p>
+        </nav>
+
+        <!-- DIV: holds the header, main and footer on the right -->
+        <div class="content-wrap">
+
+            <!-- HEADER -->
+            <header class="site-header">
+                <a class="brand" href="Main.html">
+                    <img src="images/logo.svg" alt="Ground Floor logo: a building with a lit ground floor" width="44" height="44">
+                    <span class="brand-name">Ground Floor</span>
+                </a>
+                <p class="tagline">A small business guide. You can make your own startup.</p>
+            </header>
+
+            <!-- MAIN -->
+            <main id="content">
+
+                <!-- Block 1: hero -->
+                <section class="hero">
+                    <div class="wrap hero-grid">
+                        <div class="reveal">
+                            <p class="kicker">A free guide for first-time founders in Australia</p>
+                            <h1>Your idea doesn't need a boardroom.</h1>
+                            <p class="lead">
+                                Ground Floor walks you through starting a small business in Australia,
+                                from testing an idea on a weekend to registering your
+                                <abbr title="Australian Business Number">ABN</abbr> and making your first sale.
+                            </p>
+                            <a class="btn" href="Roadmap.html">Start the roadmap</a>
+                            <a class="btn btn-alt" href="Funding.html">See what it costs</a>
+                        </div>
+                        <img src="images/hero.svg" alt="Line drawing of a building where only the ground floor is lit" width="560" height="560" class="reveal delay-1">
+                    </div>
+                    <div class="wrap">
+                        <p class="source-line">Every fact and fee on this site comes from the ABS, the ATO or business.gov.au, and is listed on the References page.</p>
+                    </div>
+                </section>
+
+                <!-- Block 2: the numbers -->
+                <section class="band band-bone">
+                    <div class="wrap split">
+                        <div class="reveal">
+                            <h2>You wouldn't be the only one.</h2>
+                            <p class="lead">
+                                At 30 June 2026 there were <strong>2,814,778</strong> businesses actively trading in Australia,
+                                and <strong>460,461</strong> new ones started during the year
+                                (Australian Bureau of Statistics, 2026).<br>
+                                That works out to an entry rate of <mark>16.9%</mark> against an exit rate of 13.8%.
+                            </p>
+                        </div>
+                        <div class="reveal delay-1">
+                            <p class="big-number">2,814,778</p>
+                            <p class="number-label">businesses actively trading at 30 June 2026</p>
+                            <p class="big-number">460,461</p>
+                            <p class="number-label">new businesses started in 2025&#8211;26</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Block 3: who it's for -->
+                <section class="band">
+                    <div class="wrap split">
+                        <div class="reveal">
+                            <h2>Is this guide for you?</h2>
+                            <p class="lead">It probably is if you can tick at least one of these.</p>
+                        </div>
+                        <ul class="checklist reveal delay-1">
+                            <li><span class="tick">&#10003;</span>You have an idea and keep thinking <q>someone should really make this</q>.</li>
+                            <li><span class="tick">&#10003;</span>You already sell something on the side and want to make it official.</li>
+                            <li><span class="tick">&#10003;</span>You're a student who wants to know what starting a business involves.</li>
+                            <li><span class="tick">&#10003;</span>You'd rather spend <em>$47</em> than <em>$4,700</em> finding out if your idea works.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Block 4: quote -->
+                <div class="band band-coal">
+                    <div class="wrap reveal">
+                        <blockquote cite="http://www.paulgraham.com/start.html">
+                            <p>&#8220;You need three things to create a successful startup: to start with good people,
+                            to make something customers actually want, and to spend as little money as possible.&#8221;</p>
+                            <footer>Paul Graham, <cite>How to Start a Startup</cite> (Graham, 2005)</footer>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Block 5: where to go next -->
+                <section class="band band-bone">
+                    <div class="wrap">
+                        <div class="reveal">
+                            <h2>Pick where to start.</h2>
+                            <p class="lead">Three parts of the guide, each one a single page you can read in ten minutes.</p>
+                        </div>
+                        <div class="card-grid">
+                            <article class="card reveal">
+                                <a href="Roadmap.html">
+                                    <img src="images/icon-launch.svg" alt="Rocket icon: go to the startup roadmap" width="56" height="56">
+                                </a>
+                                <h3>The six-step roadmap</h3>
+                                <p>From finding a real problem to growing after launch, with a short video that covers every step.</p>
+                                <a href="Roadmap.html">Open the roadmap</a>
+                            </article>
+                            <article class="card reveal delay-1">
+                                <a href="Funding.html">
+                                    <img src="images/icon-money.svg" alt="Money icon: go to costs and funding" width="56" height="56">
+                                </a>
+                                <h3>Costs and funding</h3>
+                                <p>An example first-year budget and six ways people pay for a new business.</p>
+                                <a href="Funding.html">See the numbers</a>
+                            </article>
+                            <article class="card reveal delay-2">
+                                <a href="Contact.html">
+                                    <img src="images/icon-mail.svg" alt="Envelope icon: go to the contact page" width="56" height="56">
+                                </a>
+                                <h3>Ask a question</h3>
+                                <p>Stuck on a step? Send a message and tell us what stage you're at.</p>
+                                <a href="Contact.html">Get in touch</a>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Block 6: music to plan to -->
+                <section class="band">
+                    <div class="wrap split">
+                        <div class="reveal">
+                            <h2>Something to work to.</h2>
+                            <p>
+                                <img src="images/icon-audio.svg" alt="" width="32" height="32" class="icon">
+                                A 38-second lo-fi loop made for this site. Press play while you write your one-page plan.
+                            </p>
+                        </div>
+                        <figure class="media-box reveal delay-1">
+                            <audio controls loop preload="metadata">
+                                <source src="media/focus-loop.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <figcaption>Focus loop, 38 seconds, plays on repeat.</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- Block 7: call to action -->
+                <section class="band band-gold">
+                    <div class="wrap reveal">
+                        <h2>Start on the ground floor.</h2>
+                        <p>Step one takes an afternoon and costs nothing.</p>
+                        <a class="btn btn-dark" href="Roadmap.html">Read step one</a>
+                        <p class="note" style="margin-top: 40px; color: #3D3A35; border-left-color: #0D0D0F;">
+                            Ground Floor is general information for learning, not legal, tax or financial advice.
+                        </p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="site-footer">
+                <div class="footer-links">
+                    <img src="images/logo.svg" alt="Ground Floor logo" width="36" height="36">
+                    <p>&copy; 2026 Ground Floor<br><small>Built for 4478 Introduction to IT</small></p>
+                </div>
+                <p>
+                    <a href="mailto:u3275830@uni.canberra.edu.au">Email us</a> |
+                    <a href="https://business.gov.au/" target="_blank" rel="noopener">business.gov.au</a> |
+                    <a href="References.html">References</a>
+                </p>
+                <img src="images/badge-canberra.svg" alt="Made in Canberra badge" width="150" height="48">
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

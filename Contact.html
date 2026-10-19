@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Contact.html: contact page (site map level 1), built on wireframe (c) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Send Ground Floor a question about starting your small business.">
+    <meta name="author" content="Ben Lum">
+    <title>Contact | Ground Floor</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400..900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Embedded CSS: the two-column layout from wireframe (c) -->
+    <style>
+        .contact-columns {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .details h2 {
+            font-size: 1.8rem;
+            margin-top: 28px;
+        }
+
+        .details h3 {
+            margin-top: 28px;
+        }
+
+        .details a {
+            overflow-wrap: anywhere;
+        }
+
+        .details address {
+            font-style: normal;
+        }
+
+        .details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .question {
+            margin: 18px 0 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #CFCAC0;
+        }
+
+        @media (max-width: 860px) {
+            .contact-columns {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#content">Skip to main content</a>
+
+    <!-- DIV: outer wrapper for wireframe (c) -->
+    <div id="page" class="layout-c">
+
+        <!-- HEADER -->
+        <header class="site-header">
+            <a class="brand" href="Main.html">
+                <img src="images/logo.svg" alt="Ground Floor logo: a building with a lit ground floor" width="44" height="44">
+                <span class="brand-name">Ground Floor</span>
+            </a>
+            <p class="tagline">A small business guide. You can make your own startup.</p>
+        </header>
+
+        <!-- NAV: horizontal menu bar -->
+        <nav id="site-nav" class="nav-bar" aria-label="Site menu">
+            <ul class="menu">
+                <li>
+                    <a href="Main.html">Home</a>
+                    <ul>
+                        <li>
+                            <a href="Roadmap.html">Startup roadmap</a>
+                            <ul>
+                                <li><a href="Funding.html">Costs &amp; funding</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Contact.html" class="current" aria-current="page">Contact</a></li>
+                        <li>
+                            <a href="MetaPage.html">MetaPage</a>
+                            <ul>
+                                <li><a href="References.html">References</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- MAIN -->
+        <main id="content">
+
+            <section class="page-hero">
+                <div class="wrap">
+                    <h1>Ask us a question</h1>
+                    <p class="lead">
+                        Tell us what you're working on and which step you're stuck on.
+                        The more detail you give, the more useful the answer.
+                    </p>
+                </div>
+            </section>
+
+            <div class="band">
+                <div class="wrap contact-columns">
+
+                    <!-- Left column: contact form -->
+                    <form id="contact-form" action="#" method="post">
+                        <fieldset>
+                            <legend>About you</legend>
+
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Your question</legend>
+
+                            <label for="topic">What is it about?</label>
+                            <select id="topic" name="topic">
+                                <option value="idea">Testing an idea</option>
+                                <option value="structure">Business structure</option>
+                                <option value="registration">ABN, business name or GST</option>
+                                <option value="funding">Costs and funding</option>
+                                <option value="other">Something else</option>
+                            </select>
+
+                            <p class="question">Where are you up to?</p>
+                            <label class="choice"><input type="radio" name="stage" value="idea" checked> Just an idea</label>
+                            <label class="choice"><input type="radio" name="stage" value="testing"> Testing it</label>
+                            <label class="choice"><input type="radio" name="stage" value="trading"> Already selling</label>
+
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+
+                            <label class="choice" style="margin-top: 18px;">
+                                <input type="checkbox" name="newsletter" value="yes">
+                                Send me the monthly tips email
+                            </label>
+                        </fieldset>
+
+                        <button type="submit" class="btn">Send message</button>
+                        <button type="reset" class="btn btn-alt">Clear form</button>
+
+                        <p class="note" style="margin-top: 20px;">
+                            This is a demonstration form for a university assignment, so messages aren't sent anywhere yet.
+                            To reach us now, use the email link beside the form.
+                        </p>
+                    </form>
+
+                    <!-- Right column: contact details -->
+                    <aside class="panel details">
+                        <img src="images/contact.svg" alt="Line drawing of an envelope sealed with a G" width="420" height="260" class="img-border">
+                        <h2>Contact details</h2>
+                        <ul>
+                            <li>
+                                <img src="images/icon-mail.svg" alt="" width="28" height="28" class="icon">
+                                <a href="mailto:u3275830@uni.canberra.edu.au?subject=Ground%20Floor%20question">u3275830@uni.canberra.edu.au</a>
+                            </li>
+                            <li>
+                                <img src="images/icon-pin.svg" alt="" width="28" height="28" class="icon">
+                                <address>
+                                    University of Canberra<br>
+                                    11 Kirinari Street<br>
+                                    Bruce ACT 2617
+                                </address>
+                            </li>
+                        </ul>
+
+                        <h3>Need official help?</h3>
+                        <ul>
+                            <li>
+                                <img src="images/icon-globe.svg" alt="" width="28" height="28" class="icon">
+                                <a href="https://business.gov.au/" target="_blank" rel="noopener">business.gov.au</a>
+                            </li>
+                            <li>
+                                <img src="images/icon-globe.svg" alt="" width="28" height="28" class="icon">
+                                <a href="https://www.asbfeo.gov.au/" target="_blank" rel="noopener">Small Business Ombudsman</a>
+                            </li>
+                            <li>
+                                <img src="images/icon-globe.svg" alt="" width="28" height="28" class="icon">
+                                <a href="https://www.ato.gov.au/businesses-and-organisations" target="_blank" rel="noopener">Australian Taxation Office</a>
+                            </li>
+                        </ul>
+                        <p><small>We usually reply within two business days.</small></p>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-links">
+                <img src="images/logo.svg" alt="Ground Floor logo" width="36" height="36">
+                <p>&copy; 2026 Ground Floor<br><small>Built for 4478 Introduction to IT</small></p>
+            </div>
+            <p>
+                <a href="mailto:u3275830@uni.canberra.edu.au">Email us</a> |
+                <a href="https://business.gov.au/" target="_blank" rel="noopener">business.gov.au</a> |
+                <a href="References.html">References</a>
+            </p>
+            <img src="images/badge-canberra.svg" alt="Made in Canberra badge" width="150" height="48">
+        </footer>
+    </div>
+</body>
+</html>

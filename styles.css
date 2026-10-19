@@ -1,0 +1,989 @@
+/* =====================================================================
+   Ground Floor: a small business guide
+   External stylesheet shared by every page.
+   All colour values are written in hexadecimal (DS12).
+
+   Palette
+     Ink    #0D0D0F   page background
+     Coal   #141417   raised dark surfaces
+     Line   #2C2B31   hairline borders on dark
+     Bone   #F2EEE6   light bands and text on dark
+     Gold   #C9A55C   the one accent colour
+     Stone  #A39E94   muted text on dark
+   ===================================================================== */
+
+
+/* ---------- 1. Base ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #0D0D0F;
+    background-image: url("../images/bg-grid.svg");
+    color: #E4DFD5;
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    color: #F2EEE6;
+    margin: 0 0 18px;
+}
+
+h1 {
+    font-size: 4.6rem;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.04;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #C9A55C;
+}
+
+h6 {
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #A39E94;
+}
+
+p {
+    margin: 0 0 18px;
+    max-width: 64ch;
+}
+
+a {
+    color: #F2EEE6;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #C9A55C;
+    text-underline-offset: 4px;
+}
+
+a:hover {
+    color: #C9A55C;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+video:focus,
+audio:focus {
+    outline: 2px solid #C9A55C;
+    outline-offset: 3px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ---------- 2. ID selectors (DS13) ---------- */
+
+/* Outer page wrapper: the DIV in every wireframe */
+#page {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Site menu inside the NAV element */
+#site-nav {
+    background-color: #0D0D0F;
+    border-right: 1px solid #2C2B31;
+    padding: 36px 28px;
+}
+
+/* Main content area: target of the skip link */
+#content {
+    min-height: 480px;
+    background-color: #0D0D0F;
+}
+
+/* Contact form on Contact.html */
+#contact-form {
+    background-color: #141417;
+    border: 1px solid #2C2B31;
+    padding: 36px;
+}
+
+/* Reference list on References.html: hanging indent */
+#reference-list li {
+    padding-left: 32px;
+    text-indent: -32px;
+    margin-bottom: 20px;
+}
+
+
+/* ---------- 3. Page layouts (DS14 wireframes) ---------- */
+
+/* Wireframe (a): NAV beside a wrapper holding HEADER, MAIN, FOOTER */
+.layout-a {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+.layout-a > nav {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Wireframe (b): HEADER across the top, NAV left, MAIN and FOOTER right */
+.layout-b {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "nav footer";
+}
+
+.layout-b > header {
+    grid-area: header;
+}
+
+.layout-b > nav {
+    grid-area: nav;
+}
+
+.layout-b > nav .menu {
+    position: sticky;
+    top: 36px;
+}
+
+.layout-b > main {
+    grid-area: main;
+    min-width: 0;
+}
+
+.layout-b > footer {
+    grid-area: footer;
+}
+
+/* Wireframes (c) and (d): everything stacked, horizontal NAV bar */
+.layout-c {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* ---------- 4. Bands: the full-width blocks each page is built from ---------- */
+
+.band {
+    padding: 112px 0;
+}
+
+.band-tight {
+    padding: 72px 0;
+}
+
+.band-coal {
+    background-color: #141417;
+}
+
+.band-bone {
+    background-color: #F2EEE6;
+    color: #2A2825;
+}
+
+.band-bone h2,
+.band-bone h3,
+.band-bone h4 {
+    color: #0D0D0F;
+}
+
+.band-bone a {
+    color: #0D0D0F;
+    text-decoration-color: #8A6D33;
+}
+
+.band-bone a:hover {
+    color: #8A6D33;
+}
+
+.band-gold {
+    background-color: #C9A55C;
+    color: #0D0D0F;
+}
+
+/* Keeps content at a comfortable reading width inside a full-width band */
+.wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 56px;
+}
+
+/* A boxed block on dark */
+.panel {
+    background-color: #141417;
+    border: 1px solid #2C2B31;
+    padding: 36px;
+}
+
+/* Page title band used at the top of every inner page */
+.page-hero {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid #2C2B31;
+    background-color: #0D0D0F;
+    background-image: radial-gradient(circle at 85% 0%, #2A2418 0%, #0D0D0F 55%);
+}
+
+.page-hero h1 {
+    font-size: 4rem;
+}
+
+
+/* ---------- 5. Header ---------- */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    padding: 18px 56px;
+    background-color: #0D0D0F;
+    border-bottom: 1px solid #2C2B31;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.brand-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #F2EEE6;
+}
+
+.tagline {
+    margin: 0;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #A39E94;
+}
+
+
+/* ---------- 6. Navigation (site map menu, DS17) ---------- */
+
+.menu,
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Child pages are indented with a hairline so the tree shows the site map */
+.menu ul {
+    margin-left: 12px;
+    padding-left: 10px;
+    border-left: 1px solid #2C2B31;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 0 8px 14px;
+    border-left: 2px solid #0D0D0F;
+    color: #CFCAC0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #F2EEE6;
+    border-left-color: #5A564E;
+}
+
+.menu a.current {
+    color: #C9A55C;
+    border-left-color: #C9A55C;
+    font-weight: 700;
+}
+
+.nav-note {
+    margin-top: 28px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: #77736B;
+}
+
+/* Horizontal version of the menu for Contact and References */
+#site-nav.nav-bar {
+    border-right: 0;
+    border-bottom: 1px solid #2C2B31;
+    padding: 6px 56px;
+}
+
+.nav-bar .menu,
+.nav-bar .menu ul,
+.nav-bar .menu li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-bar .menu ul {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
+}
+
+.nav-bar .menu a {
+    padding: 14px 16px;
+    border-left: 0;
+    border-bottom: 2px solid #0D0D0F;
+}
+
+.nav-bar .menu a.current {
+    border-bottom-color: #C9A55C;
+}
+
+
+/* ---------- 7. Reusable classes (DS13) ---------- */
+
+.lead {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #CFCAC0;
+}
+
+.band-bone .lead {
+    color: #3D3A35;
+}
+
+.kicker {
+    margin-bottom: 22px;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #C9A55C;
+}
+
+.btn {
+    display: inline-block;
+    margin: 8px 14px 8px 0;
+    padding: 16px 30px;
+    background-color: #C9A55C;
+    border: 1px solid #C9A55C;
+    border-radius: 3px;
+    color: #0D0D0F;
+    font-family: "Archivo", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #DDBE7C;
+    border-color: #C9A55C;
+    color: #0D0D0F;
+}
+
+.btn-alt {
+    background-color: #0D0D0F;
+    border-color: #5A564E;
+    color: #F2EEE6;
+}
+
+.btn-alt:hover {
+    background-color: #F2EEE6;
+    border-color: #C9A55C;
+    color: #0D0D0F;
+}
+
+.btn-small {
+    margin: 0;
+    padding: 10px 18px;
+    font-size: 0.9rem;
+}
+
+.card {
+    background-color: #141417;
+    border: 1px solid #2C2B31;
+    padding: 36px;
+}
+
+.band-bone .card {
+    background-color: #FFFFFF;
+    border-color: #DDD7CB;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.note {
+    border-left: 2px solid #C9A55C;
+    padding: 6px 0 6px 20px;
+    font-size: 0.95rem;
+    color: #A39E94;
+    max-width: none;
+}
+
+.band-bone .note {
+    color: #5E5A53;
+    border-left-color: #8A6D33;
+}
+
+/* Image alignment and borders (CSS replacements for the obsolete
+   HTML align and border attributes) */
+.align-right {
+    float: right;
+    margin: 0 0 24px 40px;
+}
+
+.align-left {
+    float: left;
+    margin: 0 40px 24px 0;
+}
+
+.img-border {
+    border: 1px solid #2C2B31;
+}
+
+.clear {
+    clear: both;
+}
+
+.icon {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+/* ---------- 8. Lists (DS6) ---------- */
+
+.checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.checklist li {
+    padding: 22px 0;
+    border-top: 1px solid #2C2B31;
+    font-size: 1.15rem;
+}
+
+.checklist li:last-child {
+    border-bottom: 1px solid #2C2B31;
+}
+
+.tick {
+    display: inline-block;
+    width: 34px;
+    color: #C9A55C;
+}
+
+.steps {
+    padding-left: 0;
+    list-style: none;
+}
+
+.steps > li {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 28px;
+    padding: 40px 0;
+    border-top: 1px solid #2C2B31;
+}
+
+/* Step numbers look like the round buttons in a lift */
+.floor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border: 1px solid #C9A55C;
+    border-radius: 50%;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 2.2rem;
+    color: #C9A55C;
+}
+
+.glossary dt {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 24px;
+    color: #F2EEE6;
+}
+
+.glossary dd {
+    margin: 6px 0 0 0;
+    padding-left: 18px;
+    border-left: 1px solid #C9A55C;
+}
+
+.band-bone .glossary dt {
+    color: #0D0D0F;
+}
+
+.band-bone .glossary dd {
+    border-left-color: #8A6D33;
+}
+
+
+/* ---------- 9. Writing elements (DS8) ---------- */
+
+blockquote {
+    margin: 0;
+    padding-left: 40px;
+    border-left: 2px solid #C9A55C;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 2.6rem;
+    line-height: 1.18;
+    color: #F2EEE6;
+}
+
+blockquote p {
+    max-width: 30ch;
+    margin-bottom: 28px;
+}
+
+blockquote footer {
+    font-family: "Archivo", Arial, sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    color: #A39E94;
+}
+
+mark {
+    background-color: #C9A55C;
+    color: #0D0D0F;
+    padding: 0 6px;
+}
+
+abbr {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #77736B;
+    cursor: help;
+}
+
+code {
+    padding: 1px 6px;
+    background-color: #1C1B20;
+    border: 1px solid #2C2B31;
+    color: #E4DFD5;
+    font-size: 0.9em;
+}
+
+
+/* ---------- 10. Tables (DS15) ---------- */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #2C2B31;
+    margin: 28px 0;
+    background-color: #0D0D0F;
+}
+
+.data-table caption {
+    text-align: left;
+    font-weight: 700;
+    color: #F2EEE6;
+    padding-bottom: 14px;
+}
+
+.data-table th {
+    background-color: #1C1B20;
+    color: #F2EEE6;
+    text-align: left;
+    padding: 14px 16px;
+    border: 1px solid #2C2B31;
+}
+
+.data-table thead th {
+    border-bottom: 2px solid #C9A55C;
+}
+
+.data-table tbody th {
+    background-color: #141417;
+    color: #C9A55C;
+    vertical-align: top;
+}
+
+.data-table td {
+    padding: 14px 16px;
+    border: 1px solid #2C2B31;
+    vertical-align: top;
+}
+
+.data-table tbody tr:nth-child(even) td {
+    background-color: #121215;
+}
+
+.data-table tfoot td {
+    background-color: #1C1B20;
+    border-top: 2px solid #C9A55C;
+    color: #C9A55C;
+    font-weight: 700;
+}
+
+.num {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Responsive table wrapper: scrolls sideways on small screens */
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-scroll .data-table {
+    min-width: 680px;
+}
+
+
+/* ---------- 11. Media ---------- */
+
+.media-box {
+    margin: 40px 0;
+}
+
+.media-box video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #2C2B31;
+    background-color: #000000;
+}
+
+.media-box audio {
+    display: block;
+    width: 100%;
+}
+
+figcaption {
+    margin-top: 12px;
+    font-size: 0.92rem;
+    color: #A39E94;
+}
+
+
+/* ---------- 12. Forms (DS5) ---------- */
+
+fieldset {
+    border: 1px solid #2C2B31;
+    margin: 0 0 24px;
+    padding: 22px 24px 26px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: 700;
+    color: #C9A55C;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #CFCAC0;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
+    background-color: #0D0D0F;
+    border: 1px solid #3A3940;
+    border-radius: 3px;
+    color: #F2EEE6;
+    font-family: "Archivo", Arial, sans-serif;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #C9A55C;
+}
+
+.choice {
+    display: inline-block;
+    margin-right: 22px;
+    font-weight: 400;
+}
+
+
+/* ---------- 13. Footer ---------- */
+
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+    padding: 40px 56px;
+    border-top: 1px solid #2C2B31;
+    background-color: #0D0D0F;
+    font-size: 0.92rem;
+    color: #A39E94;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* ---------- 14. Scroll reveal ---------- */
+
+/* Only hidden when reveal.js has run, so the page still works without JavaScript */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(48px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.js .delay-1 {
+    transition-delay: 0.12s;
+}
+
+.js .delay-2 {
+    transition-delay: 0.24s;
+}
+
+
+/* ---------- 15. Skip link (keyboard users) ---------- */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    padding: 10px 16px;
+    background-color: #C9A55C;
+    color: #0D0D0F;
+    z-index: 10;
+}
+
+
+/* ---------- 16. Small screens ---------- */
+
+@media (max-width: 960px) {
+
+    h1,
+    .page-hero h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.1rem;
+    }
+
+    .split {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    blockquote {
+        font-size: 1.9rem;
+        padding-left: 24px;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .layout-a,
+    .layout-b {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: none;
+    }
+
+    .layout-b > header,
+    .layout-b > nav,
+    .layout-b > main,
+    .layout-b > footer {
+        grid-area: auto;
+    }
+
+    /* Wireframe (a) on phones: let the header sit above the menu */
+    .content-wrap {
+        display: contents;
+    }
+
+    .site-header {
+        order: 1;
+        padding: 16px 20px;
+    }
+
+    #site-nav {
+        order: 2;
+        position: static;
+        height: auto;
+        border-right: 0;
+        border-bottom: 1px solid #2C2B31;
+        padding: 6px 20px;
+    }
+
+    #content {
+        order: 3;
+    }
+
+    .site-footer {
+        order: 4;
+        padding: 32px 20px;
+    }
+
+    /* Menu becomes a single wrapping row on phones */
+    .menu,
+    .menu ul,
+    .menu li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .menu ul,
+    .layout-b > nav .menu {
+        position: static;
+        margin-left: 0;
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .menu a,
+    .nav-bar .menu a {
+        padding: 10px 10px;
+        border-left: 0;
+        border-bottom: 2px solid #0D0D0F;
+    }
+
+    .menu a.current {
+        border-bottom-color: #C9A55C;
+    }
+
+    .nav-note {
+        display: none;
+    }
+
+    #site-nav.nav-bar {
+        padding: 6px 20px;
+    }
+
+    .band {
+        padding: 72px 0;
+    }
+
+    .wrap {
+        padding: 0 20px;
+    }
+
+    .page-hero {
+        padding: 64px 0 48px;
+    }
+
+    .steps > li {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .align-right,
+    .align-left {
+        float: none;
+        margin: 0 0 24px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .js .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
